@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <head></head>
+  <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <a href="http://google.com" id="target" target="_blank">"Click here, it will open a new tab"<b>something else</b>
+    </a>
+    
+    <script type="text/javascript">
+      var newWin;
+      if (Math.random() < 0.05) {
+        //$("body").click(function(e) {
+          newWin = window.open();
+          if ( Math.floor( (Math.random() * 100) + 1 ) > 50)
+            newWin.location = "http://google.com";
+          else
+             newWin.location = "http://yahoo.com";
+        //});
+      }
+    </script>
+  </body>
+</html>
