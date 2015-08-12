@@ -1,0 +1,17 @@
+{application, cs, 
+[{description, "couponscience.io"},
+ {vsn, "0.0.1"},
+ {modules, [cs, sup]},
+ {registered, []},
+ {included_applications, [asn1,
+                          crypto,
+                          ibrowse]},
+ {applications, [kernel,
+                 stdlib,
+                 lager,
+                 cowboy]},
+ {mod, {cs, []}},
+ {env, []}
+]}.
+
+

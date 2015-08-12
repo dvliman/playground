@@ -1,0 +1,21 @@
+categories
+
+1) GET /api/v1/categories
+   public route, returns all valid categories
+   client should always use the name part for entering the data
+   and the value part of displaying the data. anything other than these
+   categories are invalid
+
+   {
+       data: [
+       {
+           name: "accessories",
+           value: "Accessories"
+       },
+       {
+           name: "automotive",
+           value: "Automotive"
+       },
+       ...
+       ]
+   }

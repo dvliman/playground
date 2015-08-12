@@ -1,0 +1,13 @@
+couponscience.io API endpoints
+
+authentication / authorization
+    each resource is documented. for now, there is either public (no auth)
+    or admin required. there is no authorization yet
+
+content type
+    all endpoints accepts and return json only
+    no exception except image uploads which may return jpeg
+
+response encoding
+    by default, all response looks like
+    data: [json objects]

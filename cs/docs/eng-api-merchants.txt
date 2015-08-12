@@ -1,0 +1,30 @@
+merchants
+
+1) POST   /api/v1/merchants
+2) GET    /api/v1/merchants
+3) GET    /api/v1/merchants/[merchant_id]
+4) PUT    /api/v1/merchants/[merchant_id]
+5) DELETE /api/v1/merchants/[merchant_id]
+
+1) POST   /api/v1/merchants (admin)
+   	Id         bson.ObjectId `json:"id" bson:"_id"`
+	MerchantId bson.ObjectId `json:"merchant_id" bson:"merchant_id" validate:"nonzero"`
+
+	Name        string `json:"name" bson:"name" validate:"nonzero"`
+	Url         string `json:"url" bson:"url" validate:"nonzero"`
+	Type        string `json:"type" bson:"type"`
+	Permalink   string `json:"permalink" bson:"permalink" validate:"nonzero"`
+	Category    string `json:"category" bson:"category" validate:"nonzero"`
+	Description string `json:"description" bson:"description"`
+
+	Picture string `json:"picture" bson:"picture"`
+
+	Saves int     `json:"saves" bson:"saves"`
+	Ups   int     `json:"ups" bson:"ups"`
+	Downs int     `json:"downs" bson: "downs"`
+	Score float64 `json:"score" bson:"score"`
+
+	Expires time.Time `json:"expires" bson:"expires", validate:"nonzero"`
+	Created time.Time `json:"created" bson:"created"`
+	Updated time.Time `json:"updated" bson:"updated"`
+
